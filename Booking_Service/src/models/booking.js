@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
       },
     totalCost: {
       type: DataTypes.INTEGER,
-      allowNull: flase
+      allowNull: false
     }
   }, {
     sequelize,
