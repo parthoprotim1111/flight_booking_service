@@ -17,9 +17,9 @@ async function createBooking(req,res){
         return res.status(StatusCodes.OK).json(successRes)
         
     } catch (error) {
-        console.log("Printing Error",error)
+        
         errorRes.error=error;
-        return res.status(error.StatusCodes).json(errorRes)
+        return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(errorRes)
         
     }
 

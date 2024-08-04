@@ -3,8 +3,8 @@ const {
   Model
 } = require('sequelize');
 
-const {seat_type}= require('../utils/common')
-const {PENDING,BOOKED,INITIATED,CANCELLED}= seat_type.Booking_status
+const {Enums}= require('../utils/common')
+const {PENDING,BOOKED,INITIATED,CANCELLED}= Enums.Booking_status
 module.exports = (sequelize, DataTypes) => {
   class Booking extends Model {
     /**
@@ -17,10 +17,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Booking.init({
-    flightId: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
     flightId: {
       type: DataTypes.INTEGER,
       allowNull: false

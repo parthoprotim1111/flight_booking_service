@@ -14,6 +14,6 @@ const Booking_status={
 }
 
 module.exports= {
-    Seat_Type,
-    Booking_status
+    Booking_status,
+    Seat_Type
 };

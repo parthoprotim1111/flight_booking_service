@@ -1,6 +1,6 @@
 'use strict';
-const {seat_type}= require('../utils/common')
-const {PENDING,BOOKED,INITIATED,CANCELLED}= seat_type.Booking_status
+const {Enums}= require('../utils/common')
+const {PENDING,BOOKED,INITIATED,CANCELLED}= Enums.Booking_status
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -11,10 +11,6 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
-      },
-      flightId: {
-        type: Sequelize.INTEGER,
-        allowNull: false
       },
       flightId: {
         type: Sequelize.INTEGER,
