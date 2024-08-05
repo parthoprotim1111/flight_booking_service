@@ -3,9 +3,9 @@ const router= express.Router()
 const {bookingController}=require('../../controllers')
 
 
-router.get('/',bookingController.createBooking)
+router.post('/',bookingController.createBooking)
 
 
-
+router.post('/payment',bookingController.makePayment)
 
 module.exports=router;
